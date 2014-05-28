@@ -1,6 +1,17 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 @import "mixins.less";
 
+@font-face {
+    font-family: 'CronosPro Regular';
+    src: url('CronosPro-Regular.eot');
+    src: url('CronosPro-Regular.eot?#iefix') format('embedded-opentype'),
+         url('CronosPro-Regular.woff') format('woff'),
+         url('CronosPro-Regular.ttf') format('truetype'),
+         url('CronosPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -22,6 +33,10 @@ textarea {
 html {
   font-size: 1em;
   line-height: 1.4;
+}
+
+body {
+  padding: 0 1em;
 }
 
 /*
@@ -78,6 +93,13 @@ textarea {
   resize: vertical;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "CronosPro Regular";
+}
+
 
 /*
  * Colors
@@ -93,46 +115,47 @@ textarea {
 @purple: #F73ADB;
 
 /*
- * Nav
+ * welcome
  */
 
-.nav {
-  position: absolute;
-  z-index: 99;
+.welcome {
+  padding-top: 6em;
+  text-align: center;
 }
 
-.brand {
-  background: url('gerosion_logo_400_white_transparent.png') no-repeat;
-  background-size: 200px 77px;
+.welcome-brand {
+  .at2x('gerosion_logo_400.png', 400px, 153px);
   display: block;
-  height: 77px;
-  width: 200px;
+  height: 153px;
+  margin: 0 auto;
+  width: 400px;
   .text-hide();
 }
 
-/*
- * Slides
- */
-
-.slide {
-  height: 100%;
-  position: absolute;
-  width: 100%;
+.welcome-text {
+  border-bottom: 2px solid @gray;
+  border-top: 2px solid @gray;
+  color: @gray;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 auto 1em auto;
+  max-width: 650px;
+  padding: 10px 0;
 }
 
-#intro {
-  background: @red url('slide.png') no-repeat center center fixed;
-  background-size: cover;
-  color: @white;
-  text-align: center;
+.welcome-contact {
+  font-family: "CronosPro Regular";
+  font-size: 18px;
 }
-#intro:before {content:" "; display:inline-block; height:100%; vertical-align:middle;}
 
-.intro-text {
-  border-bottom: 1px solid @white;
-  border-top: 1px solid @white;
-  display: inline-block;
-  font-size: 30px;
-  max-width: 800px;
-  padding: 10xp 0;
+
+a {
+  color: @red;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: darken(@red, 20%);
+  text-decoration: underline;
 }
