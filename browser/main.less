@@ -38,6 +38,11 @@ html {
 body {
   padding: 0 1em;
 }
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 1em;
+  }
+}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -122,6 +127,11 @@ h4 {
   padding-top: 6em;
   text-align: center;
 }
+@media only screen and (max-width: 767px) {
+  .welcome {
+    padding-top: 0;
+  }
+}
 
 .welcome-brand {
   .at2x('gerosion_logo_400.png', 400px, 153px);
@@ -130,6 +140,13 @@ h4 {
   margin: 0 auto;
   width: 400px;
   .text-hide();
+}
+@media only screen and (max-width: 767px) {
+  .welcome-brand {
+    background-image: url('gerosion_logo_400.png');
+    height: 77px;
+    width: 200px;
+  }
 }
 
 .welcome-text {
