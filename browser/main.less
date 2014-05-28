@@ -1,0 +1,138 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+@import "mixins.less";
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+
+/*
+ * Colors
+ */
+
+@white: #FFFFFF;
+@red: #FF3333;
+@gray: #333333;
+@blue: #0099FF;
+@yellow: #F2DB00;
+@yellowred: #FF9900;
+@green: #00CC66;
+@purple: #F73ADB;
+
+/*
+ * Nav
+ */
+
+.nav {
+  position: absolute;
+  z-index: 99;
+}
+
+.brand {
+  background: url('gerosion_logo_400_white_transparent.png') no-repeat;
+  background-size: 200px 77px;
+  display: block;
+  height: 77px;
+  width: 200px;
+  .text-hide();
+}
+
+/*
+ * Slides
+ */
+
+.slide {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#intro {
+  background: @red url('slide.png') no-repeat center center fixed;
+  background-size: cover;
+  color: @white;
+  text-align: center;
+}
+#intro:before {content:" "; display:inline-block; height:100%; vertical-align:middle;}
+
+.intro-text {
+  border-bottom: 1px solid @white;
+  border-top: 1px solid @white;
+  display: inline-block;
+  font-size: 30px;
+  max-width: 800px;
+  padding: 10xp 0;
+}
